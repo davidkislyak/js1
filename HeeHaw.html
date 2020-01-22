@@ -1,17 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./scripts/HeeHaw.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="scripts/heeHaw.js"></script>
     <title>HeeHaw Console Program</title>
 </head>
 <body>
-<h1>View the js console to play HeeHaw.</h1>
-</body>
+<h1>View the js console to play HeeHaw Chapter 2.</h1>
 <script>
-    heeHaw(100);
+    consoleHeeHaw(100);
 </script>
+
+<h1><br>HeeHaw Chapter 3:</h1>
+<div id="heehaw-3-1">
+    <h3>HeeHaw 3:</h3>
+</div>
+<div id="heehaw-3-2">
+    <h3>HeeHaw 5:</h3>
+</div>
+<div id="heehaw-3-3">
+    <h3>HeeHaw 12:</h3>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    arrToList(heeHaw(3), "#heehaw-3-1");
+    arrToList(heeHaw(5), "#heehaw-3-2");
+    arrToList(heeHaw(12), "#heehaw-3-3");
+</script>
+</body>
 </html>
