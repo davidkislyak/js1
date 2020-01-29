@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="./scripts/array-object.js"></script>
+
+    <title>Array To Object</title>
+</head>
+<body>
+    <h1>Array to Object converter</h1>
+    <h3>Input Array:</h3>
+    <p>[-1, 5, "cat", false, 10.2, true, "dog"]</p>
+    <h3>Output Object:</h3>
+        <script>
+            document.write('<p>' +
+                JSON.stringify(
+                    arrToObj([-1, 5, "cat", false, 10.2, true, "dog"]), null, 4
+                ) + '</p>'
+            );
+        </script>
+</body>
+</html>
