@@ -1,4 +1,4 @@
-let json_data = {
+let people_data, json_data = `{
     "jane doe": {
         "name": {
             "first": "Jane",
@@ -84,13 +84,16 @@ let json_data = {
         "born": 1978,
         "died": 1995
     }
-};
+}`;
+
 
 function jsonSearch() {
     let inputQuery = document.getElementById('query_text').value.toLowerCase();
     let outputHTML = "";
 
-    for (let person in json_data) {
+    people_data = JSON.parse(json_data);
+
+    for (let person in people_data) {
         let personFound = checkSubstring(inputQuery, person);
 
         if (personFound) {
@@ -112,15 +115,15 @@ function checkSubstring(substring, string) {
 }
 
 function buildPerson(person) {
-    let father = json_data[person]["father"]["first"] +
-        " " + json_data[person]["father"]["last"];
-    let mother = json_data[person]["mother"]["first"] +
-        " " + json_data[person]["mother"]["last"];
-    let name = json_data[person]["name"]["first"] +
-        " " + json_data[person]["name"]["last"];
-    let born = json_data[person]["born"];
-    let died = json_data[person]["died"];
-    let sex = json_data[person]["sex"];
+    let father = people_data[person]["father"]["first"] +
+        " " + people_data[person]["father"]["last"];
+    let mother = people_data[person]["mother"]["first"] +
+        " " + people_data[person]["mother"]["last"];
+    let name = people_data[person]["name"]["first"] +
+        " " + people_data[person]["name"]["last"];
+    let born = people_data[person]["born"];
+    let died = people_data[person]["died"];
+    let sex = people_data[person]["sex"];
 
     let output = `<p><b>Name: ${name}</b></p>`;
     output += `<p>Sex: ${sex}</p>`;
